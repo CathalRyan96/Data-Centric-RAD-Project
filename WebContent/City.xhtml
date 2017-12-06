@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  >
+
+  
+  <h:head>
+    <title>City</title>
+    <f:metadata>
+  		<f:event type="preRenderView" 
+      	listener="#{cityController.loadCities()}"/>
+	</f:metadata>
+	</h:head>
+	
+	<h:body>
+	
+	<h:dataTable value="#{cityController.cities}" var ="u" border="3">
+	
+	<h:column>
+  		<f:facet name = "header">
+  		City Code
+  		</f:facet>
+  		#{u.cityCode}
+  	</h:column>
+  	
+  	<h:column>
+  		<f:facet name = "header">
+  		Country Code
+  		</f:facet>
+  		#{u.countryCode}
+  	</h:column>
+  	
+  	<h:column>
+  		<f:facet name = "header">
+  		Region Code
+  		</f:facet>
+  		#{u.regionCode}
+  	</h:column>
+  	
+  	<h:column>
+  		<f:facet name = "header">
+  		City Name
+  		</f:facet>
+  		#{u.cityName}
+  	</h:column>
+  	
+  	<h:column>
+  		<f:facet name = "header">
+  		Population
+  		</f:facet>
+  		#{u.population}
+  	</h:column>
+  	
+  	<h:column>
+  		<f:facet name = "header">
+  		By The Sea
+  		</f:facet>
+  		#{u.isCoastal}
+  	</h:column>
+  	
+  	<h:column>
+  		<f:facet name = "header">
+  		Area
+  		</f:facet>
+  		#{u.area}
+  	</h:column>
+  	
+  	
+	
+	
+	</h:dataTable>
+	
+	
+	
+	 </h:body>
+  
+</html>
